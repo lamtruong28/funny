@@ -1,14 +1,13 @@
 var boxMsg = document.getElementById('box-msg');
 var btnYes = document.querySelector('.yes');
 var btnNo = document.querySelector('.no');
-
+var outPut = document.querySelector('.output');
+var yourName = document.querySelector('.your-name');
 // boxMsg.draggable = true
-
-
 var local = boxMsg.getBoundingClientRect();
 
 btnYes.addEventListener('click', function() {
-    alert ('Cảm ơn bạn đã đồng ý :)) ');
+    alert (`Cảm ơn bạn ${yourName.value} đã đồng ý :)) `);
 })
 
 btnNo.addEventListener('click',clickNo);
@@ -34,11 +33,9 @@ function clickNo() {
     }
 }
 
-var outPut = document.querySelector('.output');
 
-var textValue = document.querySelector('input');
 
-textValue.addEventListener('keyup', function (e) {
+yourName.addEventListener('keyup', function (e) {
     outPut.innerHTML = e.target.value;
 })
 

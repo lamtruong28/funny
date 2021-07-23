@@ -15,7 +15,7 @@
 #box-msg {
     text-align: center;
     width: 250px;
-    height: 150px;
+    min-height: 150px;
     font-weight: bolder;
     background-color: #f1f1f1;
     transition: linear all .5s;
@@ -79,6 +79,7 @@
     display: none;
 }
 
+.your-name,
 .modal form input {
     padding: 8px;
 }
