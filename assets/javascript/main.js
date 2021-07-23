@@ -34,3 +34,30 @@ function clickNo() {
     }
 }
 
+var outPut = document.querySelector('.output');
+
+var textValue = document.querySelector('input');
+
+textValue.addEventListener('keyup', function (e) {
+    outPut.innerHTML = e.target.value;
+})
+
+var modal = document.querySelector('.modal');
+var pass = document.querySelector('.pass');
+var sendBtn = document.querySelector('.btn-send');
+var formSend = document.querySelector('.send-form');
+pass.addEventListener('input', (e) => {
+    var passWord = e.target.value;
+    sendBtn.onclick = function() {  
+        if (passWord == 'truong'  ) {
+            modal.classList.add('close');
+            alert('Hello bạn!')
+        }else {
+            modal.classList.remove('close');
+            alert('Mật khẩu không chính xác!')
+            sendBtn.type = 'reset';
+        }
+    }
+
+})
+
